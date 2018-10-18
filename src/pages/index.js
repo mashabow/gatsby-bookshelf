@@ -19,7 +19,7 @@ export default ({ data }) => (
         {data.allSampleCsv.edges.map(({ node }, index) => (
           <tr key={index}>
             <td>
-              {node.title}
+              <a href={node.fields.slug}>{node.title}</a>
             </td>
             <td>{node.linkUrl ? <a href={node.linkUrl}>Amazon</a> : '-'}</td>
             <td>{node.purchaseDate}</td>
@@ -40,6 +40,9 @@ export const query = graphql`
           linkUrl
           purchaseDate
           finishDate
+          fields {
+            slug
+          }
         }
       }
     }

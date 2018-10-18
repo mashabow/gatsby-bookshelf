@@ -1,5 +1,5 @@
 import React from "react";
-import { graphql } from "gatsby";
+import { Link, graphql } from "gatsby";
 
 import Layout from "../components/layout";
 
@@ -15,6 +15,7 @@ export default ({ data }) => {
           <a href={book.linkUrl}><img src={book.mediumImageUrl}/></a>
         }
       </div>
+      <Link to="/">トップページに戻る</Link>
     </Layout>
   );
 };
