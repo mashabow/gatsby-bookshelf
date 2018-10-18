@@ -10,7 +10,6 @@ export default ({ data }) => (
       <thead>
         <tr>
           <th>タイトル</th>
-          <th></th>
           <th>購入日</th>
           <th>読了日</th>
         </tr>
@@ -21,7 +20,6 @@ export default ({ data }) => (
             <td>
               <a href={node.fields.slug}>{node.title}</a>
             </td>
-            <td>{node.linkUrl ? <a href={node.linkUrl}>Amazon</a> : '-'}</td>
             <td>{node.purchaseDate}</td>
             <td>{node.finishDate}</td>
           </tr>
