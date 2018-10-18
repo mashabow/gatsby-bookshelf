@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link, graphql } from 'gatsby'
+import { graphql } from 'gatsby'
 
 import Layout from '../components/layout'
 
@@ -28,7 +28,6 @@ export default ({ data }) => (
         ))}
       </tbody>
     </table>
-    <Link to="/page-2/">Go to page 2</Link>
   </Layout>
 )
 
